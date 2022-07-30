@@ -1,0 +1,102 @@
+{
+    "coal mine" : {
+        "need" : null,
+        "product" : [
+            {
+                "item" : "coal",
+                "quantity" : 16.0
+            }
+        ]
+    },
+    "iron mine" : {
+        "need" : null,
+        "product" : [
+            {
+                "item" : "iron",
+                "quantity" : 12.0
+            }
+        ]
+    },
+    "steel factory" : {
+        "need" : [
+            {
+                "item" : "coal",
+                "quantity" : 8.0
+            },
+            {
+                "item" : "iron",
+                "quantity" : 12.0
+            }
+        ],
+        "product" : [
+            {
+                "item" : "steel",
+                "quantity" : 20.0
+            }
+        ]
+    },
+    "cotton farm" : {
+        "need" : null,
+        "product" : [
+            {
+                "item" : "cotton",
+                "quantity" : 3.0
+            }
+        ]
+    },
+    "loom factory" : {
+        "need" : [
+            {
+                "item" : "cotton",
+                "quantity" : 5.0
+            }
+        ],
+        "product" : [
+            {
+                "item" : "fabric",
+                "quantity" : 1.0
+            }
+        ]
+    },
+    "flower farm" : {
+        "need" : null,
+        "product" : [
+            {
+                "item" : "flower",
+                "quantity" : 1.2
+            }
+        ]
+    },
+    "dye factory" : {
+        "need" : [
+            {
+                "item" : "flower",
+                "quantity" : 15.0
+            }
+        ],
+        "product" : [
+            {
+                "item" : "dye",
+                "quantity" : 1.5
+            }
+        ]
+    },
+    "clothes factory" : {
+        "need" : [
+            {
+                "item" : "fabric",
+                "quantity" : 10.0
+            },
+            {
+                "item" : "dye",
+                "quantity" : 1.0
+            }
+        ],
+        "product" : [
+            {
+                "item" : "clothes",
+                "quantity" : 5.0
+            }
+        ]
+    }
+}

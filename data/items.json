@@ -1,0 +1,34 @@
+{
+    "coal" : {
+        "bulk" : 1.0,
+        "value" : 1.0
+    },
+    "iron" : {
+        "bulk" : 1.0,
+        "value" : 1.5
+    },
+    "steel" : {
+        "bulk" : 2.0,
+        "value" : 5.0
+    },
+    "cotton" : {
+        "bulk" : 3.0,
+        "value" : 3.0
+    },
+    "fabric" : {
+        "bulk" : 2.0,
+        "value" : 10.0
+    },
+    "flower" : {
+        "bulk" : 6.0,
+        "value" : 5.0
+    },
+    "dye" : {
+        "bulk" : 0.5,
+        "value" : 20.0
+    },
+    "clothes" : {
+        "bulk" : 10.0,
+        "value" : 80.0
+    }
+}
