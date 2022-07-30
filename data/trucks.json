@@ -1,0 +1,7 @@
+{
+    "basic-truck" : {
+        "speed" : 25.0,
+        "capacity" : 25,
+        "price" : 145000
+    }
+}

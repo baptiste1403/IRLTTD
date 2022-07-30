@@ -3,8 +3,6 @@ import time
 import requests as req
 from model.City import City
 
-from model.Path import Path
-
 def cities(name):
     res = []
 
@@ -31,8 +29,8 @@ def cityByINSEE(code: int):
     res['dep'] = dictResult['departement']['code']
 
     return res
-
-def distanceBetweenCity(code1: int, code2: int) -> Path:
+"""
+def distanceBetweenCity(code1: int, code2: int):
 
     r1 = req.get(f'https://geo.api.gouv.fr/communes/{code1}?fields=code,nom,centre')
     lat1 = r1.json()['centre']['coordinates'][0]
@@ -46,7 +44,20 @@ def distanceBetweenCity(code1: int, code2: int) -> Path:
 
     route = result.json()['routes'][0]
     return Path(round(float(route['distance'])/1000.0, 2), round(float(route['duration'])/3600.0, 2))
+"""
+def getRouteBetweenCity(code1: int, code2: int):
 
+    r1 = req.get(f'https://geo.api.gouv.fr/communes/{code1}?fields=code,nom,centre')
+    lat1 = r1.json()['centre']['coordinates'][0]
+    lon1 = r1.json()['centre']['coordinates'][1]
+
+    r2 = req.get(f'https://geo.api.gouv.fr/communes/{code2}?fields=code,nom,centre')
+    lat2 = r2.json()['centre']['coordinates'][0]
+    lon2 = r2.json()['centre']['coordinates'][1]
+
+    url = f"http://router.project-osrm.org/route/v1/driving/{lat1},{lon1};{lat2},{lon2}?overview=full&annotations=distance"
+    r = req.get(url)
+    return r.json()['routes'][0]
 
 def getDepartmentSupliers(code: int):
     city = cityByINSEE(code)

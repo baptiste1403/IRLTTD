@@ -1,5 +1,7 @@
 import json
 
+import folium
+
 
 def getFactoriesInfo():
     f = open("data/industries.json")
@@ -24,3 +26,34 @@ def getFactoriesInfo():
     res += "```"
     f.close()
     return res
+
+def generateMap(trips):
+
+    m = folium.Map(zoom_start=1)
+
+    for trip in trips.values():
+
+        folium.PolyLine(
+        trip.getRoute().getPath(),
+        weight=8,
+        color='blue',
+        opacity=0.6
+        ).add_to(m)
+
+        folium.Marker(
+            location=trip.getRoute().getRoadPartAt(0),
+            icon=folium.Icon(icon='play', color='green'),
+        ).add_to(m)
+
+        folium.Marker(
+            location=trip.getRoute().getRoadPartAt(trip.getRoute().getNbPoint()-1),
+            icon=folium.Icon(icon='stop', color='red')
+        ).add_to(m)
+
+        folium.Marker(
+            location=trip.getPosition(),
+            icon=folium.Icon(icon='stop', color='blue'),
+            tooltip=folium.Tooltip(trip.getTruck().getName())
+        ).add_to(m)
+
+    m.save("map.html")
