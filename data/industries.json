@@ -14,6 +14,10 @@
             {
                 "item" : "iron",
                 "quantity" : 12.0
+            },
+            {
+                "item" : "silicon ore",
+                "quantity" : 8.0
             }
         ]
     },
@@ -96,6 +100,61 @@
             {
                 "item" : "clothes",
                 "quantity" : 5.0
+            }
+        ]
+    },
+    "fat dragon factory" : {
+        "need" : [
+            {
+                "item" : "silicon",
+                "quantity" : 10.0
+            },
+            {
+                "item" : "dye",
+                "quantity" : 1.0
+            }
+        ],
+        "product" : [
+            {
+                "item" : "fat dragon",
+                "quantity" : 5.0
+            }
+        ]
+    },
+    "silicon factory" : {
+        "need" : [
+            {
+                "item" : "silicon ore",
+                "quantity" : 10.0
+            }
+        ],
+        "product" : [
+            {
+                "item" : "silicon",
+                "quantity" : 5.0
+            }
+        ]
+    },
+    "forest" : {
+        "need" : null,
+        "product" : [
+            {
+                "item" : "wood",
+                "quantity" : 5.0
+            }
+        ]
+    },
+    "sawmill" : {
+        "need" : [
+            {
+                "item" : "wood",
+                "quantity" : 10.0
+            }
+        ],
+        "product" : [
+            {
+                "item" : "plank",
+                "quantity" : 8.0
             }
         ]
     }
