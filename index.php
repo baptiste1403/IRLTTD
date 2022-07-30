@@ -1,1 +1,1 @@
-<?php include_once("map.html"); ?>
+<?php include_once("worldmap.html"); ?>
