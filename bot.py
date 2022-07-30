@@ -33,6 +33,7 @@ async def search_city(ctx, name):
     res = ""
     for city in cities:
         res += f"{city['name']}, {city['dep']}, {city['reg']}, INSEE({city['code']})\n"
+    print(res)
     await ctx.send(res)
 
 @bot.command(name='addcity', help='add city to the card with the INSEE code')
