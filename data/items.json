@@ -30,5 +30,25 @@
     "clothes" : {
         "bulk" : 10.0,
         "value" : 80.0
+    },
+    "silicon ore" : {
+        "bulk" : 1.0,
+        "value" : 2.0
+    },
+    "silicon" : {
+        "bulk" : 2.0,
+        "value" : 5.0
+    },
+    "fat dragon" : {
+        "bulk" : 1.0,
+        "value" : 15.0
+    },
+    "wood" : {
+        "bulk" : 2.0,
+        "value" : 1.0
+    },
+    "plank" : {
+        "bulk" : 1.0,
+        "value" : 3.0
     }
 }
