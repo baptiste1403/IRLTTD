@@ -1,9 +1,9 @@
 import json
 import time
 import requests as req
-from City import City
+from model.City import City
 
-from Path import Path
+from model.Path import Path
 
 def cities(name):
     res = []

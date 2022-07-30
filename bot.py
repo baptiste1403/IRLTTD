@@ -1,10 +1,10 @@
 import os
 from unicodedata import name
 
-import plot
-from City import City
-import api
-import utils
+import util.plot as plot
+from model.City import City
+import util.api as api
+import util.utils as utils
 import networkx as nx
 
 import discord
