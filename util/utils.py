@@ -56,4 +56,6 @@ def generateMap(trips):
             tooltip=folium.Tooltip(trip.getTruck().getName())
         ).add_to(m)
 
-    m.save("worldmap.html")
+    m.save("./worldmap.html")
+    with open('data_out.html', 'w') as file:
+        file.write('Some text to write to HTML file')
